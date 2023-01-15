@@ -81,6 +81,65 @@ video {
 .main {
   background-color: var(--color-black-1);
 }
+.main__interest-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.main__interest-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  align-items: center;
+}
+.main__interest {
+  width: 25rem;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.main__interest:hover {
+  color: #735f32;
+  scale: 1.05;
+}
+.main__interest-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.main__interest-img {
+  height: 100%;
+}
+.main__line-design {
+  height: 0.3rem;
+  width: 12rem;
+  background-color: #ffffff;
+}
+.main__about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.main__about-list {
+  margin-left: 1.8rem;
+}
+.main__about-personal-box {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.main__about-personal-p {
+  font-size: 1.6rem;
+}
+.main__about-me-text {
+  font-size: 1.6rem;
+}
 .main--home {
   min-height: 100vh;
 }
@@ -154,7 +213,6 @@ video {
 }
 .footer__main {
   display: flex;
-  column-gap: 8rem;
 }
 @media only screen and (max-width: 50em) {
   .footer__main {
@@ -163,7 +221,6 @@ video {
   }
 }
 .footer__socials {
-  width: 33.3333%;
   align-self: flex-end;
   display: flex;
   column-gap: 2rem;
@@ -191,50 +248,9 @@ video {
 .footer__socials-photo {
   height: 100%;
 }
-.footer__info {
-  width: 33.3333%;
-}
-@media only screen and (max-width: 50em) {
-  .footer__info {
-    align-self: center;
-  }
-}
-.footer__menu {
-  list-style: none;
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-@media only screen and (max-width: 50em) {
-  .footer__menu {
-    flex-direction: row;
-    column-gap: 2rem;
-    justify-content: center;
-  }
-}
-.footer__link:link, .footer__link:visited {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: var(--color-white);
-  transition: all 0.2s;
-}
-.footer__link:hover {
-  background-color: var(--color-black-1);
-  padding: 0.5rem;
-  scale: 1.1;
-  transform: rotate(2deg);
-}
-.footer__details {
-  width: 33.3333%;
-  font-size: 1.5rem;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 1.5rem;
-}
 
 .heading--1 {
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -258,7 +274,13 @@ video {
 .heading--2 {
   font-size: 3.5rem;
   font-weight: 300;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.heading--4 {
+  font-size: 1.8rem;
 }
 
 @keyframes bounce {

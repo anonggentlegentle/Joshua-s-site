@@ -90,6 +90,79 @@ video {
 .main {
   background-color: var(--color-black-1);
 
+  &__interest-box {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__interest-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__interest {
+    width: 25rem;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .5rem;
+
+    &:hover {
+      color: #735f32;
+      scale: 1.05;
+    }
+  }
+
+  &__interest-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__interest-img {
+    height: 100%;
+  }
+
+  &__line-design {
+    height: 0.3rem;
+    width: 12rem;
+    background-color: #ffffff;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  &__about-list {
+    margin-left: 1.8rem;
+  }
+
+  &__about-personal-box {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+  }
+
+  &__about-personal-p {
+    font-size: 1.6rem;
+  }
+
+  &__about-me-text {
+    font-size: 1.6rem;
+  }
+
   &--home {
     min-height: 100vh;
   }
@@ -174,7 +247,6 @@ video {
 
   &__main {
     display: flex;
-    column-gap: 8rem;
 
     @media only screen and (max-width: $bp-1) {
       flex-direction: column;
@@ -183,8 +255,6 @@ video {
   }
 
   &__socials {
-    width: 33.3333%;
-
     align-self: flex-end;
     display: flex;
     column-gap: 2rem;
@@ -218,60 +288,11 @@ video {
   &__socials-photo {
     height: 100%;
   }
-
-  &__info {
-    width: 33.3333%;
-
-    @media only screen and (max-width: $bp-1) {
-      align-self: center;
-    }
-  }
-
-  &__menu {
-    list-style: none;
-    color: var(--color-white);
-
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-
-    @media only screen and (max-width: $bp-1) {
-      flex-direction: row;
-      column-gap: 2rem;
-      justify-content: center;
-    }
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      text-decoration: none;
-      font-size: 1.6rem;
-      color: var(--color-white);
-      transition: all 0.2s;
-    }
-
-    &:hover {
-      background-color: var(--color-black-1);
-      padding: 0.5rem;
-      scale: 1.1;
-      transform: rotate(2deg);
-    }
-  }
-
-  &__details {
-    width: 33.3333%;
-    font-size: 1.5rem;
-
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 1.5rem;
-  }
 }
 
 .heading {
   &--1 {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 300;
     line-height: 1.5;
 
@@ -302,7 +323,16 @@ video {
   &--2 {
     font-size: 3.5rem;
     font-weight: 300;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  &--4 {
+    font-size: 1.8rem;
+    
   }
 }
 
