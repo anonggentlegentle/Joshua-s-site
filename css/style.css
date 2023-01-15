@@ -45,6 +45,7 @@ video {
 .container {
   width: min(120rem, 100%);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .header {
@@ -130,11 +131,26 @@ video {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 50em) {
+  .main__about-personal {
+    flex-direction: column;
+  }
+}
 .main__about-text {
   width: 45%;
 }
+@media only screen and (max-width: 50em) {
+  .main__about-text {
+    width: 100%;
+  }
+}
 .main__about-photo {
   width: 45%;
+}
+@media only screen and (max-width: 50em) {
+  .main__about-photo {
+    width: 100%;
+  }
 }
 .main__about-list {
   margin-left: 1.8rem;
