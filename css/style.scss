@@ -45,7 +45,6 @@ video {
 }
 
 .container {
-  padding: 0 2rem;
   width: min(120rem, 100%);
   margin: 0 auto;
 }
@@ -143,6 +142,20 @@ video {
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
+  }
+
+  &__about-personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__about-text {
+    width: 45%;
+  }
+
+  &__about-photo {
+    width: 45%;
   }
 
   &__about-list {
